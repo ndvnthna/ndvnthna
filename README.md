@@ -1,6 +1,6 @@
 <div align="center">
 
-# Halo, saya Nadiva Naathania! 👋
+# Halo, saya Nadiva Nathania! 👋
 
 **Mahasiswa Teknik Informatika | Aspiring Data Analyst**
 

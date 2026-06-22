@@ -1,59 +1,67 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
+<div align="center">
 
-class SalesAnalyzer:
-    """
-    Kelas untuk melakukan pembersihan dan analisis data penjualan.
-    """
-    def __init__(self, file_path):
-        self.data = pd.read_csv(file_path)
-        
-    def clean_data(self):
-        """
-        Membersihkan data dengan menghapus missing values 
-        dan mengonversi tipe data kolom tanggal.
-        """
-        # Menghapus duplikat
-        self.data.drop_duplicates(inplace=True)
-        # Menangani nilai kosong
-        self.data.dropna(subset=['sales', 'date'], inplace=True)
-        # Konversi ke datetime
-        self.data['date'] = pd.to_datetime(self.data['date'])
-        return "Data berhasil dibersihkan."
+# Halo, saya Nadiva Nathania! 👋
 
-    def perform_eda(self):
-        """
-        Melakukan Exploratory Data Analysis (EDA) sederhana.
-        """
-        summary = self.data.describe()
-        correlation = self.data.corr(numeric_only=True)
-        return summary, correlation
+**Mahasiswa Teknik Informatika | Aspiring Data Analyst**
 
-    def visualize_trend(self):
-        """
-        Menampilkan tren penjualan bulanan menggunakan seaborn.
-        """
-        self.data['month'] = self.data['date'].dt.to_period('M')
-        monthly_sales = self.data.groupby('month')['sales'].sum()
-        
-        plt.figure(figsize=(10, 6))
-        sns.lineplot(x=monthly_sales.index.astype(str), y=monthly_sales.values)
-        plt.title('Tren Penjualan Bulanan')
-        plt.xticks(rotation=45)
-        plt.show()
+*Menganalisis data, menemukan insight, dan membangun masa depan berbasis data.*
 
-# --- Implementasi ---
-if __name__ == "__main__":
-    # Inisialisasi Analisis
-    # Pastikan Anda memiliki file 'sales_data.csv'
-    try:
-        analyzer = SalesAnalyzer('sales_data.csv')
-        print(analyzer.clean_data())
-        
-        stats, corr = analyzer.perform_eda()
-        print("Ringkasan Statistik:\n", stats)
-        
-        analyzer.visualize_trend()
-    except FileNotFoundError:
-        print("File tidak ditemukan. Pastikan path file benar.")
+<br>
+
+<img src="https://github-readme-stats.vercel.app/api?username=USERNAME_GITHUB_ANDA&show_icons=true&theme=radical&count_private=true" alt="Stats" />
+
+</div>
+
+---
+
+### 🛠 Tech Stack & Tools
+Di sini saya mencantumkan alat yang saya gunakan dalam perjalanan analisis data saya:
+
+<div align="left">
+
+**Bahasa Pemrograman & Analisis:**
+<br>
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=mysql&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
+![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
+
+**Visualisasi Data & BI:**
+<br>
+![Matplotlib](https://img.shields.io/badge/Matplotlib-ffffff?style=flat&logo=python&logoColor=black)
+![Seaborn](https://img.shields.io/badge/Seaborn-4A90E2?style=flat&logo=python&logoColor=white)
+![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?style=flat&logo=powerbi&logoColor=black)
+
+**Tools & Environment:**
+<br>
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=flat&logo=jupyter&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+</div>
+
+---
+
+### 📊 Proyek Analisis Data Pilihan
+
+Berikut adalah beberapa proyek yang merepresentasikan keahlian saya dalam mengolah data:
+
+| Nama Proyek | Fokus Analisis | Tools |
+| :--- | :--- | :--- |
+| **Sales Performance Report** | Sales Trend & Forecasting | Python, Pandas, Seaborn |
+| **User Behavior Analysis** | Customer Segmentation (RFM) | SQL, Excel, Power BI |
+| **Custom OS Research** | Kernel Metrics & System Log | Linux, Bash, Python |
+
+*(Klik pada judul proyek untuk melihat detail lengkap di repositori)*
+
+---
+
+### 📫 Let's Connect!
+Saya selalu terbuka untuk berdiskusi seputar Data Science, Web Development, atau kolaborasi proyek lainnya.
+
+- 📧 **Email**: [Alamat Email Anda]
+- 🔗 **LinkedIn**: [Link LinkedIn Anda]
+- 💻 **Portfolio**: [Link Website/Portfolio Anda]
+
+<div align="center">
+  <sub>"Data adalah bahasa masa depan, dan saya adalah penerjemahnya."</sub>
+</div>
